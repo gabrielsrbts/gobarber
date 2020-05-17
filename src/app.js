@@ -1,6 +1,5 @@
 import express from 'express';
-import routes  from './routes';
-
+import routes from './routes';
 
 class App {
   constructor() {
@@ -8,10 +7,9 @@ class App {
 
     this.middlewares();
     this.routes();
-    
   }
 
-  middlewares(){
+  middlewares() {
     this.server.use(express.json());
   }
 
@@ -22,5 +20,5 @@ class App {
 
 export default new App().server;
 
-//após instalação do Sucrase, mudamos a forma de exportar o módulo.
-//module.exports = new App().server;
+// após instalação do Sucrase, mudamos a forma de exportar o módulo.
+// module.exports = new App().server.
